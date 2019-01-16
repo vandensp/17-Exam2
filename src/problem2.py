@@ -87,11 +87,11 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    #run_test_init()
-    #run_test_area()
-    #run_test_bigger_triangle()
-    #run_test_shrink_or_expand()
-    #run_test_return_doubled_triangle()
+    run_test_init()
+    run_test_area()
+    run_test_bigger_triangle()
+    run_test_shrink_or_expand()
+    run_test_return_doubled_triangle()
     run_test_get_largest_area()
 
 
@@ -263,14 +263,6 @@ class Triangle(object):
             self.biggest = self
         elif self.bigger_triangle(original_triangle) == False:
             self.biggest = original_triangle
-
-            print("og a", original_triangle.a)
-            print("og b", original_triangle.b)
-            print("og c", original_triangle.c)
-
-            print("self a", self.a)
-            print("self b", self.b)
-            print("self c", self.c)
 
         self.biggest_area = self.biggest.area()
 
