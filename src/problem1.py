@@ -14,8 +14,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     #run_test_problem1a()
     #run_test_problem1b()
-    run_test_problem1c()
-    # run_test_problem1d()
+    #run_test_problem1c()
+    run_test_problem1d()
 
 
 ###############################################################################
@@ -394,9 +394,14 @@ def problem1c(integers):
            their respective indices (0, 1, and 2, respectively).
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+
+    for k in range (len(integers)):
+        if integers[k] < k:
+            return integers[k]
+    return 999
 
 
 def run_test_problem1d():
@@ -528,15 +533,21 @@ def problem1d(t, sequence):
            FOR HELP if this problem's specification is not clear to you.
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
-
+    product = 1
+    for k in range (len(sequence) // 2, len(sequence)):
+        if sum_of_digits(sequence[k]) > t:
+            product = product * sequence[k]
+    return product
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
 ###############################################################################
+
+
 
 def print_expected_result_of_test(arguments, expected,
                                   test_results, format_string, suffix=''):
